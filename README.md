@@ -76,7 +76,7 @@ To run the app using docker, follow the steps below:
 2. Run `npm install` to install the dependencies
 3. Create .env file in the root folder and copy paste the content of example.env, and add necessary credentials.
 4. To start the react app client run `npm start` in one terminal
-5. To start the server run `npm server:dev` or `pm2 start server.js` in another terminal
+5. To start the server run `npm run server:dev` or `pm2 start server.js` in another terminal
 6. Go to `http://localhost:3000` to view the app
 7. Follow the steps 4-7 from the [Running via Docker Image](https://github.com/Mohitur669/Realtime-Collaborative-Code-Editor?tab=readme-ov-file#running-via-docker-image) section to create and join a room
 
