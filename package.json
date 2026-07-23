@@ -22,15 +22,16 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "start:docker": "pm2 start server.js && npm start",
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "build:digitalocean": "npm install --force && react-scripts build",
-        "server:dev": "nodemon server.js",
-        "server:prod": "node server.js",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
-    },
+       "start:docker": "pm2 start server.js && npm start",
+       "start": "react-scripts start",
+       "build": "react-scripts build",
+       "build:digitalocean": "npm install --force && react-scripts build",
+       "server:dev": "nodemon server.js",
+       "server:prod": "node server.js",
+       "start:render": "node server.js",
+       "test": "react-scripts test",
+       "eject": "react-scripts eject"
+},
     "eslintConfig": {
         "extends": [
             "react-app",

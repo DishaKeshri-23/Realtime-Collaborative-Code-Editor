@@ -5,8 +5,17 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: "<your_docker_username>/code-editor"
+    image: code-editor
     ports:
       - "5000:5000"
       - "3000:3000"
       - "8000:8000"
+
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+    stdin_open: true
+    tty: true
+
+    

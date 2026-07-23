@@ -10,9 +10,12 @@ const ACTIONS = require('./src/actions/Actions');
 const server = http.createServer(app);
 const io = new Server(server);
 
-app.use(express.static('build'));
-app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// Serve React production build
+
+app.use(express.static(path.join(__dirname, "build")));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 const userSocketMap = {};
@@ -65,12 +68,8 @@ io.on('connection', (socket) => {
     });
 });
 
-// Serve response in production
-app.get('/', (req, res) => {
-    const htmlContent = '<h1>Welcome to the code editor server</h1>';
-    res.setHeader('Content-Type', 'text/html');
-    res.send(htmlContent);
-});
 
-const PORT = process.env.SERVER_PORT || 5000;
+
+const PORT = process.env.PORT || process.env.SERVER_PORT || 5000;
 server.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+
