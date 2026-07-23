@@ -79,8 +79,9 @@ const Home = () => {
             </div>
             <footer>
                 <h4>
-                    Build by &nbsp;
-                    <Link href="https://github.com/Mohitur669" target="_blank" rel="noopener noreferrer">Mohd Mohitur Rahaman</Link>
+                    Build by {" "}
+                    <a
+                    href="https://github.com/DishaKeshri-23" target="_blank" rel="noopener noreferrer">Disha Keshri</a>
                 </h4>
             </footer>
         </div>
@@ -88,3 +89,4 @@ const Home = () => {
 };
 
 export default Home;
+
